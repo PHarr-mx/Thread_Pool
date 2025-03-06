@@ -44,7 +44,6 @@ public:
         for (size_t i = 0; i < _threads.size(); i++) {
             if (_threads[i].joinable()) _threads[i].join();
         }
-
     }
 
 private:
@@ -76,7 +75,6 @@ private:
                 if (gotten) func(); // 如果已经取出任务就执行
             }
         }
-
     private:
         int _id; // 线程 id
         ThreadPool *_pool; // 所属线程池
